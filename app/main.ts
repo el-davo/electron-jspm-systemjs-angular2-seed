@@ -6,39 +6,43 @@ import 'rxjs/operator/mergeMap';
 import 'rxjs/operator/switchMap';
 import {Component} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
-import ping from 'tcp-ping';
-import TraceRoute from 'traceroute-lite';
-import {TrSideNav} from './side-nav/side-nav.component'
+import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Routes, Router} from '@angular/router';
+
+import {TiSideNav} from './side-nav/side-nav.component'
+import {TiPing} from './ping/ping.component'
 
 @Component({
-    selector: 'graph-ci-app',
-    directives: [TrSideNav],
+    selector: 'ti-electron-app',
+    directives: [ROUTER_DIRECTIVES, TiSideNav],
     template: `
                <ti-side-nav></ti-side-nav>
+               <router-outlet></router-outlet>
                 `
 })
-class GraphCi {
+class TiElectronApp {
 
-    constructor() {}
+    constructor(private router: Router) {}
 
     ngOnInit() {
-        //this.router.navigate(['/dashboard', 'root']);
+
+        this.router.navigate(['/ping']);
 
         /*ping.ping({ address: 'www.google.com'}, function(err, data) {
-            console.log(data);
-        });
+         console.log(data);
+         });
 
-        var traceroute = new TraceRoute('8.8.8.8');
+         var traceroute = new TraceRoute('8.8.8.8');
 
-        traceroute.on('hop', function(hop) {
-            console.log(hop); // { counter: 1, ip: '1.2.3.4', ms: 12 }
-        });
+         traceroute.on('hop', function(hop) {
+         console.log(hop); // { counter: 1, ip: '1.2.3.4', ms: 12 }
+         });
 
-        traceroute.start(function(err, hops) {
-            console.log(hops);
-        });*/
+         traceroute.start(function(err, hops) {
+         console.log(hops);
+         });*/
     }
 }
 
-bootstrap(GraphCi, [
+bootstrap(TiElectronApp, [
+    ROUTER_PROVIDERS
 ]);

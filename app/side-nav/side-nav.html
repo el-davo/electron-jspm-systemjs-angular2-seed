@@ -4,9 +4,9 @@
             <ti-side-nav-list></ti-side-nav-list>
         </md-sidenav>
         <md-content layout-padding>
-            <p style="height:350px;">Content</p>
-            <md-divider></md-divider>
-            <button md-raised-button class="md-raised md-primary" (click)="left.toggle()">Toggle Left Sidenav</button>
+            <div style="height:350px;">
+                <router-outlet></router-outlet>
+            </div>
         </md-content>
     </md-sidenav-layout>
 </div>

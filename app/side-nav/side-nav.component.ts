@@ -8,5 +8,5 @@ import {TiSideNavList} from './side-nav-list.component';
     templateUrl: 'side-nav/side-nav.html',
     directives: [MD_SIDENAV_DIRECTIVES, TiSideNavList]
 })
-export class TrSideNav {
+export class TiSideNav {
 }
