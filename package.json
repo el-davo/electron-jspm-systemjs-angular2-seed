@@ -46,6 +46,7 @@
       "@angular2-material/icon": "npm:@angular2-material/icon@^2.0.0-alpha.5-2",
       "@angular2-material/input": "npm:@angular2-material/input@^2.0.0-alpha.5-2",
       "@angular2-material/list": "npm:@angular2-material/list@^2.0.0-alpha.5-2",
+      "@angular2-material/sidenav": "npm:@angular2-material/sidenav@2.0.0-alpha.5-2",
       "@angular2-material/toolbar": "npm:@angular2-material/toolbar@^2.0.0-alpha.5-2",
       "angular2-fontawesome": "npm:angular2-fontawesome@^0.4.0",
       "crypto": "github:jspm/nodelibs-crypto@^0.1.0",

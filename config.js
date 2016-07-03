@@ -34,6 +34,7 @@ System.config({
     "@angular2-material/icon": "npm:@angular2-material/icon@2.0.0-alpha.5-3",
     "@angular2-material/input": "npm:@angular2-material/input@2.0.0-alpha.5-3",
     "@angular2-material/list": "npm:@angular2-material/list@2.0.0-alpha.5-3",
+    "@angular2-material/sidenav": "npm:@angular2-material/sidenav@2.0.0-alpha.5-2",
     "@angular2-material/toolbar": "npm:@angular2-material/toolbar@2.0.0-alpha.5-3",
     "angular2-fontawesome": "npm:angular2-fontawesome@0.4.0",
     "crypto": "github:jspm/nodelibs-crypto@0.1.0",
@@ -134,11 +135,6 @@ System.config({
       "rxjs": "npm:rxjs@5.0.0-beta.6",
       "zone.js": "npm:zone.js@0.6.12"
     },
-    "npm:@angular/core@2.0.0-rc.4": {
-      "process": "github:jspm/nodelibs-process@0.1.2",
-      "rxjs": "npm:rxjs@5.0.0-beta.6",
-      "zone.js": "npm:zone.js@0.6.12"
-    },
     "npm:@angular/http@2.0.0-rc.1": {
       "@angular/core": "npm:@angular/core@2.0.0-rc.1",
       "rxjs": "npm:rxjs@5.0.0-beta.6"
@@ -189,12 +185,12 @@ System.config({
       "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.5-2"
     },
     "npm:@angular2-material/core@2.0.0-alpha.5-2": {
-      "@angular/common": "npm:@angular/common@2.0.0-rc.3",
-      "@angular/core": "npm:@angular/core@2.0.0-rc.4"
+      "@angular/common": "npm:@angular/common@2.0.0-rc.1",
+      "@angular/core": "npm:@angular/core@2.0.0-rc.1"
     },
     "npm:@angular2-material/core@2.0.0-alpha.5-3": {
       "@angular/common": "npm:@angular/common@2.0.0-rc.3",
-      "@angular/core": "npm:@angular/core@2.0.0-rc.4"
+      "@angular/core": "npm:@angular/core@2.0.0-rc.3"
     },
     "npm:@angular2-material/icon@2.0.0-alpha.5-3": {
       "@angular/http": "npm:@angular/http@2.0.0-rc.3",
@@ -205,6 +201,9 @@ System.config({
     },
     "npm:@angular2-material/list@2.0.0-alpha.5-3": {
       "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.5-3"
+    },
+    "npm:@angular2-material/sidenav@2.0.0-alpha.5-2": {
+      "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.5-2"
     },
     "npm:@angular2-material/toolbar@2.0.0-alpha.5-3": {
       "@angular2-material/core": "npm:@angular2-material/core@2.0.0-alpha.5-3"

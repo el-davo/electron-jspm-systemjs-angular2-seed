@@ -8,13 +8,13 @@ import {Component} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import ping from 'tcp-ping';
 import TraceRoute from 'traceroute-lite';
-import {TrNav} from './navbar/navbar.component'
+import {TrSideNav} from './side-nav/side-nav.component'
 
 @Component({
     selector: 'graph-ci-app',
-    directives: [TrNav],
+    directives: [TrSideNav],
     template: `
-               <tr-nav></tr-nav>
+               <ti-side-nav></ti-side-nav>
                 `
 })
 class GraphCi {
@@ -24,7 +24,7 @@ class GraphCi {
     ngOnInit() {
         //this.router.navigate(['/dashboard', 'root']);
 
-        ping.ping({ address: 'www.google.com'}, function(err, data) {
+        /*ping.ping({ address: 'www.google.com'}, function(err, data) {
             console.log(data);
         });
 
@@ -36,7 +36,7 @@ class GraphCi {
 
         traceroute.start(function(err, hops) {
             console.log(hops);
-        });
+        });*/
     }
 }
 

@@ -1,0 +1,12 @@
+<div layout="column" style="height: 500px; overflow: hidden;">
+    <md-sidenav-layout>
+        <md-sidenav #left (open)="mybutton.focus()" [opened]="true" mode="side" layout-padding>
+            <ti-side-nav-list></ti-side-nav-list>
+        </md-sidenav>
+        <md-content layout-padding>
+            <p style="height:350px;">Content</p>
+            <md-divider></md-divider>
+            <button md-raised-button class="md-raised md-primary" (click)="left.toggle()">Toggle Left Sidenav</button>
+        </md-content>
+    </md-sidenav-layout>
+</div>
