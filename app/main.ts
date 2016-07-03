@@ -7,6 +7,7 @@ import 'rxjs/operator/switchMap';
 import {Component} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import ping from 'tcp-ping';
+import TraceRoute from 'traceroute-lite';
 import {TrNav} from './navbar/navbar.component'
 
 @Component({
@@ -25,6 +26,16 @@ class GraphCi {
 
         ping.ping({ address: 'www.google.com'}, function(err, data) {
             console.log(data);
+        });
+
+        var traceroute = new TraceRoute('8.8.8.8');
+
+        traceroute.on('hop', function(hop) {
+            console.log(hop); // { counter: 1, ip: '1.2.3.4', ms: 12 }
+        });
+
+        traceroute.start(function(err, hops) {
+            console.log(hops);
         });
     }
 }

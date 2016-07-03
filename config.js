@@ -44,6 +44,8 @@ System.config({
     "reflect-metadata": "npm:reflect-metadata@0.1.3",
     "rxjs": "npm:rxjs@5.0.0-beta.6",
     "tcp-ping": "npm:tcp-ping@0.1.1",
+    "traceroute": "npm:traceroute@1.0.0",
+    "traceroute-lite": "npm:traceroute-lite@0.1.0",
     "typescript": "npm:typescript@1.8.10",
     "zone.js": "npm:zone.js@0.6.12",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -514,6 +516,19 @@ System.config({
     },
     "npm:timers-browserify@1.4.2": {
       "process": "npm:process@0.11.5"
+    },
+    "npm:traceroute-lite@0.1.0": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "events": "github:jspm/nodelibs-events@0.1.1",
+      "fs": "github:jspm/nodelibs-fs@0.1.2",
+      "process": "github:jspm/nodelibs-process@0.1.2",
+      "util": "github:jspm/nodelibs-util@0.1.0"
+    },
+    "npm:traceroute@1.0.0": {
+      "child_process": "github:jspm/nodelibs-child_process@0.1.0",
+      "dns": "github:jspm/nodelibs-dns@0.1.0",
+      "net": "github:jspm/nodelibs-net@0.1.2",
+      "os": "github:jspm/nodelibs-os@0.1.0"
     },
     "npm:typescript@1.8.10": {
       "os": "github:jspm/nodelibs-os@0.1.0"
