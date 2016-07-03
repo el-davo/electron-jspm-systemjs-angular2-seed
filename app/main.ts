@@ -7,26 +7,31 @@ import 'rxjs/operator/switchMap';
 import {Component} from '@angular/core';
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {ROUTER_DIRECTIVES, ROUTER_PROVIDERS, Routes, Router} from '@angular/router';
+import {ROUTER_PROVIDERS} from '@angular/router';
 
-import {TiSideNav} from './side-nav/side-nav.component'
-import {TiPing} from './ping/ping.component'
+import {TiSideNav} from './side-nav/side-nav.component';
+import {TiPing} from './ping/ping.component';
+import {TiTraceRoute} from './trace-route/trace-route.component';
 
 @Component({
     selector: 'ti-electron-app',
     directives: [ROUTER_DIRECTIVES, TiSideNav],
     template: `
-               <ti-side-nav></ti-side-nav>
-               <router-outlet></router-outlet>
-                `
+        <ti-side-nav></ti-side-nav>
+        `
 })
+@Routes([
+    {path: '/', name: 'base', component: TiPing, useAsDefault: true},
+    {path: '/trace-route', name: 'base', component: TiTraceRoute}
+])
 class TiElectronApp {
 
-    constructor(private router: Router) {}
+    constructor(private router:Router) {
+    }
 
     ngOnInit() {
 
-        this.router.navigate(['/ping']);
-
+        //this.router.navigate(['/ping']);
         /*ping.ping({ address: 'www.google.com'}, function(err, data) {
          console.log(data);
          });
